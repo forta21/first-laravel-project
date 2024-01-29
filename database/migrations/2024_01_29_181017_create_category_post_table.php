@@ -13,8 +13,8 @@ return new class extends Migration
     {
         Schema::create('category_post', function (Blueprint $table) {
             $table->id();
-            ;$table->unsignedBigInteger( 'category_id' ) ;
-            $table->unsignedBigInteger( 'post_id' ) ;
+            $table->unsignedBigInteger('category_id');
+            $table->unsignedBigInteger('post_id');
         });
     }
 
