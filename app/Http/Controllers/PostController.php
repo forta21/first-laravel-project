@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\PostStoreRequest;
+use App\Http\Requests\Post\PostStoreRequest;
 use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Contracts\View\Factory;
@@ -37,29 +37,29 @@ class PostController extends Controller
      */
     public function store(PostStoreRequest $request): Post
     {
-     $data = $request->validated();
+        $data = $request->validated();
 
-     $image = $data['poster'];
-     $imageName = Str::random(40) . '.' . $image->getClientOriginalExtension();
-     $image->move(
-         storage_path() . '/app/public/posts/posters',
-         $imageName
-     );
+        $image = $data ['poster'];
+        $imageName = Str::random(40) . '.' . $image->getClientOriginalExtension();
+        $image->move(
+            storage_path() . '/app/public/posts/posters',
+            $imageName
+        );
 
-     $post = new Post();
+        $post = new Post();
 
-     $post->name        = $data['name'];
-     $post->description = $data['description']?? null;
-     $post->content     = $data['content'];
-     $post->poster      = $imageName;
+        $post->name = $data['name'];
+        $post->description = $data['description'] ?? null;
+        $post->content = $data['content'];
+        $post->poster = $imageName;
 
-     $post->save();
+        $post->save();
 
-     if ($data['category_ids']) {
-         $post->categories()->attach($data['category_ids']);
-     }
+        if ($data['category_ids']) {
+            $post->categories()->attach($data['category_ids']);
+        }
 
-     return $post;
+        return $post;
     }
 
     /**
@@ -91,6 +91,6 @@ class PostController extends Controller
      */
     public function destroy(Post $post): ?bool
     {
-        return$post->delete();
+        return $post->delete();
     }
 }

@@ -23,6 +23,8 @@ Route::get('/test-route', function () {
     return 'Тестовый роут';
 });
 
-Route::resource ('posts', PostController::class);
+Route::resource('posts', PostController::class);
 
-Route::resource ('categories', CategoryController::class);
+Route::resource('categories', CategoryController::class);
+
+Route::resource('comments', CommentController::class)->only(['store', 'destroy']);/

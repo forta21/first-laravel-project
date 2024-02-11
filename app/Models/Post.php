@@ -4,6 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * @property int    $id
@@ -11,16 +13,20 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $description
  * @property string $content
  * @property string $poster
- * @property string $created_add
- * @property string $updated_add
+ * @property string $created_at
+ * @property string $updated_at
  */
-
 class Post extends Model
 {
     use HasFactory;
 
-    public function categories()
+    public function categories(): BelongsToMany
     {
         return $this->belongsToMany(Category::class);
+    }
+
+    public function comments(): HasMany
+    {
+        return $this->hasMany(Comment::class);
     }
 }
