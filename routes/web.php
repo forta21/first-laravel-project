@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\CommentController;
 use App\Http\Controllers\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -27,4 +28,4 @@ Route::resource('posts', PostController::class);
 
 Route::resource('categories', CategoryController::class);
 
-Route::resource('comments', CommentController::class)->only(['store', 'destroy']);/
+Route::resource('comments', CommentController::class)->only(['store', 'destroy']);
