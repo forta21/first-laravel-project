@@ -17,9 +17,11 @@ class PostController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index(): Collection
+    public function index(): \Illuminate\Contracts\Foundation\Application|Factory|View|Application
     {
-        return Post::all();
+        $posts = Post::with('categories')->get();
+
+        return view('posts.index', compact('posts'));
     }
 
     /**
@@ -55,9 +57,11 @@ class PostController extends Controller
 
         $post->save();
 
-        if ($data['category_ids']) {
+        if (array_key_exists('category_ids', $data)) {
             $post->categories()->attach($data['category_ids']);
         }
+
+        $post->load('categories');
 
         return $post;
     }
