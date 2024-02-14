@@ -1,11 +1,31 @@
 .demo {
     background: linear-gradient(135deg, #291F22, #D83F58);
-    padding: 20px 0 30px;
+    padding: 18% 0;
 }
+
+.container {
+    height: 100%;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    width: 100%;
+}
+
 
 .row {
     justify-content: center;
 }
+
+.row-1{
+    width: 100%;
+}
+
+.center {
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+
 
 .form-container {
     font-family: 'Raleway', sans-serif;
@@ -88,6 +108,8 @@
     box-shadow: none;
 }
 
+
+
 .form-horizontal .checkbox {
     height: 14px;
     width: 14px;
@@ -153,16 +175,23 @@
     background-color: #df405a;
 }
 
+@media (min-width: 1404px) {
+    .col-md-2 {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
 @media (min-width: 768px) {
     .col-md-4 {
         flex: 0 0 auto;
-        width: 33.33333333%;
+        width: 100%;
     }
 }
 
 @media (min-width: 576px) {
     .col-sm-6 {
         flex: 0 0 auto;
-        width: 50%;
+        width: 100%;
     }
 }

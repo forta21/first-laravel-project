@@ -15,8 +15,7 @@
 <body>
 <div class="demo form-bg" style="background: linear-gradient(135deg, #291F22, #D83F58);">
     <div class="container" style="height: 1000px;">
-        <div style="justify-content: center; align-items: center; text-align: center; margin-right: -15px; margin-left: -15px; display: flex;
-    margin: auto auto;">
+        <div style="justify-content: center; align-items: center; text-align: center; margin-right: -15px; margin-left: -15px; display: flex;">
             <div class="col-md-offset-4 col-md-4 col-sm-offset-3 col-sm-6">
                 <div class="form-container">
                     <form action="{{ route('categories.store') }}" class="form-horizontal" method="post"
@@ -35,7 +34,6 @@
                                 <input class="form-label" type="file" name="poster" id="poster" required>
                             </label>
                         </div>
-
                         <button class="btn signup" type="submit">
                             <span>Сохранить</span>
                         </button>
