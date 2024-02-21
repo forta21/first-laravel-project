@@ -11,11 +11,11 @@
     Template 2085 Neuron
     http://www.tooplate.com/view/2085-neuron
     -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets//css/font-awesome.min.css') }}">
 
     <!-- Main css -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="{{ asset('assets//css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
 </head>
 <body>
@@ -84,12 +84,13 @@
 
     <!-- SCRIPTS -->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/particles.min.js"></script>
-    <script src="js/app.js"></script>
-    <script src="js/jquery.parallax.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('assets/js/jquery.js') }}"></script>
+    <script src="{{ asset('assets/js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('assets/js/particles.min.js') }}"></script>
+    <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/jquery.parallax.js') }}"></script>
+    <script src="{{ asset('assets/js/smoothscroll.js') }}"></script>
+    <script src="{{ asset('assets/js/custom.js') }}"></script>
+
 </body>
 </html>
