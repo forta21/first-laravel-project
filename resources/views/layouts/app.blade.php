@@ -13,7 +13,6 @@
     -->
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets//css/font-awesome.min.css') }}">
-
     <!-- Main css -->
     <link rel="stylesheet" href="{{ asset('assets//css/style.css')}}">
     <link href="https://fonts.googleapis.com/css?family=Lora|Merriweather:300,400" rel="stylesheet">
@@ -38,14 +37,12 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </div>
-
         </div>
     </div>
     @yield('contend')
     <footer>
         <div class="container">
             <div class="row">
-
                 <div class="col-md-5 col-md-offset-1 col-sm-6">
                     <h3>Neuron Studio</h3>
                     <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
@@ -53,18 +50,15 @@
                         <p>Copyright &copy; 2017 Your Company - Design: Tooplate</p>
                     </div>
                 </div>
-
                 <div class="col-md-4 col-md-offset-1 col-sm-6">
                     <h3>Talk to us</h3>
                     <p><i class="fa fa-globe"></i> 512 Delicious Street, San Francisco, CA 10880</p>
                     <p><i class="fa fa-phone"></i> 010-020-0990</p>
                     <p><i class="fa fa-save"></i> info@company.com</p>
                 </div>
-
                 <div class="clearfix col-md-12 col-sm-12">
                     <hr>
                 </div>
-
                 <div class="col-md-12 col-sm-12">
                     <ul class="social-icon">
                         <li><a href="#" class="fa fa-facebook"></a></li>
