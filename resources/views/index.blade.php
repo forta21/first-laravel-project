@@ -32,9 +32,10 @@
                                 <h3><a href="{{ route('posts.show', $post->id) }}">{{ $post->name }}</a></h3>
                             </div>
                             <div class="blog-post-format">
-                                <span><a href="#"><img src="{{ asset('assets/images/author-image1.jpg') }}" class="img-responsive img-circle"> Jen Lopez</a></span>
-                                <span><i class="fa fa-date"></i>{{ $post->created_at }}</span>
-                                <span><i class="fa fa-comment-o"></i> 35 Comments</a></span>
+                                <span><a href="#"><img src="{{ asset('assets/images/author-image1.jpg') }}"
+                                                       class="img-responsive img-circle"> Jen Lopez</a></span>
+                                <span><i class="fa fa-date"></i>{{ $post->created_at->translatedFormat('j F Y') }}</span>
+                                <span><i class="fa fa-comment-o"></i>{{ trans_choice(':count коментарий|:count коментария|:count коментариев', $post->comments->count()) }}</a></span>
                             </div>
                             <div class="blog-post-des">
                                 <p>{{ $post->description }}</p>
